@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#090b10">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rating proposals – Genji Ball Ranked</title>
+  <meta name="description" content="How the EU leaderboard and tiers would look under each proposed rating change, replayed over every ranked match.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/saira-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="mark" href="./"><img src="favicon.svg" alt="" width="26" height="26">Genji Ball Ranked</a>
+    <nav><a href="./" aria-current="page">Rating proposals</a><a href="https://genjiball.us/">Live leaderboard</a></nav>
+  </header>
+  <main>
+    <h1>Rating proposals</h1>
+    <p class="lede" id="lede">Every EU ranked match replayed under each proposed rating change. Pick one to see its tiers and leaderboard.</p>
+
+    <ul class="picker" id="picker" aria-label="Proposal"></ul>
+
+    <h2 id="v-title"></h2>
+    <p class="lede" id="v-desc"></p>
+    <dl class="figures" id="figures"></dl>
+
+    <h2>Tiers</h2>
+    <ul class="tiers" id="tiers"></ul>
+
+    <h2>All proposals</h2>
+    <p class="note" style="margin:0 0 .75rem">Players per tier, and how well each one predicts the newest 40% of rounds (higher is better). Click a row to open it.</p>
+    <div class="wide"><table class="all" id="all"></table></div>
+
+    <div class="title-row" style="margin-top:2.75rem">
+      <h2 style="margin:0">Leaderboard</h2>
+      <label class="find"><input id="find" type="search" placeholder="Find a player" aria-label="Find a player" autocomplete="off"></label>
+    </div>
+    <div class="cols" aria-hidden="true"><span>Rank</span><span>Player</span><span>Rating</span><span>Rounds</span><span>vs today</span></div>
+    <ol id="list" class="ladder"></ol>
+    <p class="note" id="method"></p>
+  </main>
+  <footer class="foot">
+    <span>Genji Ball · a simulation, not the live ratings</span>
+    <nav class="foot-links"><a href="https://genjiball.us/">genjiball.us</a><a href="https://github.com/Genji-Ball-Team">GitHub</a></nav>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
